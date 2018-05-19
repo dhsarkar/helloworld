@@ -21,4 +21,6 @@ sh '/opt/apache-tomcat-8.5.31/bin/startup.sh'
 sh '/opt/apache-tomcat-8.5.31/bin/catalina.sh stop'
 sh '/opt/apache-tomcat-8.5.31/bin/catalina.sh start'
 }
+    stage ('send mail') {
+            emailext body: 'This is a test mail from jenkins', subject: 'Job Status', to: 'dh.sarkar@gmail.com'
 }
